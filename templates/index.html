@@ -1,0 +1,22 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Audio Recording App</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Audio Recording App</h1>
+    <canvas id="visualizer" width="800" height="200"></canvas>
+    <div class="controls">
+      <button id="recordButton">Start Recording</button>
+      <button id="stopButton" disabled>Stop Recording</button>
+      <button id="submitButton" disabled>Submit Recording</button>
+    </div>
+    <audio id="audioPlayback" controls></audio>
+  </div>
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
